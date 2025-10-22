@@ -31,3 +31,9 @@ def c (n) :
 print(c(6)) 
 ########################
 
+def d (n) :
+    if n <= 0 :
+        return "Geht nicht, n muss natürliche Zahl sein!"
+    return n**2
+
+print(d(5))
