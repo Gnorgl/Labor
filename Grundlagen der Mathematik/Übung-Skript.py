@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.integrate import quad
-from numpy import*
+from numpy import*4
 
 #hallo
 
