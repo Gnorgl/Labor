@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Hamster
+comment0.text=\r\n\ Repraesentation\ von\ objektorientierten\ Hamstern\ im\ Java-Hamster-Modell\r\n\ \r\n\ @author\ Dietrich\ Boles\ (Universitaet\ Oldenburg)\r\n\ @version\ 2.0\ (07.06.2008)\r\n\ \r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Tue\ was\:\ das\ Hamster-Programm\r\n
+numComments=2
