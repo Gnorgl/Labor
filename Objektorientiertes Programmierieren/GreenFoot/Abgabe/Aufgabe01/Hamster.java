@@ -21,9 +21,7 @@ public class Hamster extends BasicHamster {
     public void act() {
         // friss erstes Korn
         vor();
-        linksUm();
-        linksUm();
-        linksUm();
+        welcheRichtung("links",3);
         vor();
         vor(); 
         linksUm();
@@ -33,6 +31,10 @@ public class Hamster extends BasicHamster {
         linksUm();
         vor();
         vor();
+        nimm();
+        rechtsUm();
+        vor();
+        gib();
         // Stop-Befehl, falls das Programm mittels "Run" anstelle von "Act"
         // ausgeführt werden soll:
         // Greenfoot.stop();

@@ -51,6 +51,31 @@ public abstract class BasicHamster extends Actor {
     // des Semesters sollten Sie aber auch diese Methoden nachvollziehen 
     // können.
     
+    /** Meine eigenen Befehle:
+    */
+    //Welche Richtung und wie häufig in die Richtung drehen:  
+    
+    public void welcheRichtung(String richtung, int anzahl) {
+        if(richtung.equals("rechts")) {
+            while(anzahl > 0) {
+                rechtsUm();
+                anzahl--;
+            }
+        } else if(richtung.equals("links")) {
+            while(anzahl > 0) {
+                linksUm();
+                anzahl--;
+            }
+        }
+    }
+    
+    //Hamster dreht sich nach rechts.
+    public void rechtsUm(){
+        linksUm();
+        linksUm();
+        linksUm();
+    }
+    
     
     /**
      * liefert genau dann true, wenn sich in Blickrichtung vor dem aufgerufenen

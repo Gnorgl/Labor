@@ -32,30 +32,5 @@ public class Hamster extends BasicHamster {
         // ausgeführt werden soll:
         // Greenfoot.stop();
     }
-    
-    public void steps(int number)  {
-        while(number > 0) {
-            vor();
-            KornCheck();
-            number--;
-        }
-    }
-    
-    //Hamster geht Schritte für Körner im Maul
-    public void KornCheck(){
-        if(dieseAnzahlKörner(1)) {
-                nimm();
-            }
-        return;    
-    }
-    
-    public void koernerGeben(){
-        int koernerImMaul = getAnzahlKoerner();
-        while(koernerImMaul > 0) {
-            vor();
-            gib();
-            koernerImMaul--;
-        }
-    }
 }
     

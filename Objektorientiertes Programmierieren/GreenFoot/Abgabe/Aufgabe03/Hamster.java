@@ -30,8 +30,7 @@ public class Hamster extends BasicHamster {
             }
             koernerGeben();
             einFeldNachInnenVonRechts();
-            linksUm();
-            linksUm();
+            welcheRichtung("links", 2);
             while(vornFrei() && messung < 1) {
                 vor();
             }
@@ -74,6 +73,7 @@ public class Hamster extends BasicHamster {
         }
     }
     
+    //Geh ein Feld nach Innen und leg ein Korn ab:
     public void einFeldNachInnenVonRechts() {
         while(true) {
             if(!vornFrei()) {
@@ -86,22 +86,7 @@ public class Hamster extends BasicHamster {
             koernerGeben();
         }
     }
-    
-    public void steps(int number)  {
-        while(number > 0) {
-            vor();
-            number--;
-        }
-    }
-    
-    //Hamster geht Schritte für Körner im Maul
-    public void kornCheck(){
-        if(dieseAnzahlKörner(1)) {
-                nimm();
-            }
-        return;    
-    }
-    
+    //Gib Körner im Maul
     public void koernerGeben(){
         if(kornDa()) {
             return;

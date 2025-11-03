@@ -56,6 +56,39 @@ public abstract class BasicHamster extends Actor {
     
     
     /**
+     * Meine eigenen Befehle:
+    */
+    //Wie viele Schritte nach vorn:
+    public void steps(int number)  {
+        while(number > 0) {
+            vor();
+            number--;
+        }
+    }
+    //Der Hamster dreht sich nach rechts:
+    public void rechtsUm(){
+        linksUm();
+        linksUm();
+        linksUm();
+    }
+        //Welche Richtung und wie häufig in die Richtung drehen:  
+    
+    public void welcheRichtung(String richtung, int anzahl) {
+        if(richtung.equals("rechts")) {
+            while(anzahl > 0) {
+                rechtsUm();
+                anzahl--;
+            }
+        } else if(richtung.equals("links")) {
+            while(anzahl > 0) {
+                linksUm();
+                anzahl--;
+            }
+        }
+    }
+    
+    
+    /**
      * liefert genau dann true, wenn sich in Blickrichtung vor dem aufgerufenen
      * Hamster keine Mauer befindet (wenn sich der Hamster in Blickrichtung am
      * Rand des Territoriums befindet, wird false geliefert)
@@ -98,23 +131,6 @@ public abstract class BasicHamster extends Actor {
      */
     public boolean kornDa() {
         return getWorld().getObjectsAt(getX(), getY(), Korn.class).size() > 0;
-    }
-    
-    //Genau die Anzahl an Körnern
-    public boolean dieseAnzahlKörner(int number) {
-    // Hole alle Korn-Objekte an der Hamster-Position
-    List<Korn> koerner = getWorld().getObjectsAt(getX(), getY(), Korn.class);
-    
-    // 2. PRÜFUNG: Wenn die Liste leer ist (kein Korn-Objekt da)
-    if (koerner.isEmpty()) { 
-        // Die Anzahl der Körner ist 0.
-        // Die Methode gibt nur true zurück, wenn 'number' auch 0 ist.
-        return number == 0; 
-    }
-
-    Korn kornAufFeld = koerner.get(0);
-
-    return kornAufFeld.getAnzahl() == number;
     }
     
     /**
@@ -179,14 +195,6 @@ public abstract class BasicHamster extends Actor {
         }
 
         Greenfoot.delay(1);
-    }
-    /**
-     * Der aufgerufene Hamster dreht sich rechtsum.
-     */
-    public void rechtsUm(){
-        linksUm();
-        linksUm();
-        linksUm();
     }
     /**
      * Der aufgerufene Hamster frisst ein Korn auf der Kachel, auf der er sich
