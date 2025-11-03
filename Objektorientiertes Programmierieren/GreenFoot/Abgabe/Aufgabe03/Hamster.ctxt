@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Hamster
+comment0.text=\r\n\ Repraesentation\ von\ objektorientierten\ Hamstern\ im\ Java-Hamster-Modell\r\n\ \r\n\ @author\ Dietrich\ Boles\ (Universitaet\ Oldenburg)\r\n\ @version\ 2.0\ (07.06.2008)\r\n\ \r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ gehInDieEcke()
+comment3.params=
+comment3.target=void\ einFeldNachInnenVonRechts()
+comment4.params=number
+comment4.target=void\ steps(int)
+comment5.params=
+comment5.target=void\ kornCheck()
+comment6.params=
+comment6.target=void\ koernerGeben()
+numComments=7
