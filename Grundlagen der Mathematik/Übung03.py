@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
+#Aufgabe 03 Polynome:
 def DrawCubic(c):
     """
     Plottet ein kubisches Polynom und dessen erste Ableitung im Intervall [-5, 5].
@@ -48,3 +50,48 @@ def DrawCubic(c):
     c_test = [0, -6, 1, 1] 
 
     DrawCubic(c_test)
+
+    #Aufgabe 03: Newton Iteration:
+    # Definieren der Funktion f(x) = x^3 - 7x
+def f(x):
+    """Berechnet den Wert der Funktion f(x) = x^3 - 7x."""
+    return x**3 - 7 * x
+
+# Definieren der Ableitung f'(x) = 3x^2 - 7
+def f_prime(x):
+    """Berechnet den Wert der ersten Ableitung f'(x) = 3x^2 - 7."""
+    return 3 * x**2 - 7
+
+# Implementierung der Newton-Iterationsformel
+def newton_step(x):
+    """Führt einen Schritt der Newton-Iteration durch: x := x - f(x) / f'(x)."""
+    # Überprüfen auf Division durch Null (oder sehr kleine Werte)
+    if np.abs(f_prime(x)) < 1e-10:
+        # Hier könnte man eine Fehlermeldung ausgeben oder die Iteration stoppen
+        print("Achtung: Ableitung f'(x) ist fast Null. Iteration bricht ab.")
+        return x
+    
+    # Die Kernformel
+    x_new = x - f(x) / f_prime(x)
+    return x_new
+
+x = 7.0  # Startwert x=7
+
+print(f"Startwert: x = {x}")
+print("-" * 30)
+
+# Führen wir 5 Iterationen durch:
+for i in range(1, 6):
+    x_old = x
+    x = newton_step(x)
+    print(f"Iteration {i}: x = {x:.10f}")
+
+    x = 1.0  # Startwert x=1
+print(f"\nStartwert: x = {x}")
+print("-" * 30)
+
+# Führen wir 5 Iterationen durch:
+for i in range(1, 6):
+    x_old = x
+    x = newton_step(x)
+    print(f"Iteration {i}: x = {x:.10f}")
