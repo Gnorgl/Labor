@@ -1,7 +1,31 @@
 #BlueJ class context
 comment0.target=Hamster
-comment0.text=\r\n\ Repraesentation\ von\ objektorientierten\ Hamstern\ im\ Java-Hamster-Modell\r\n\ \r\n\ @author\ Dietrich\ Boles\ (Universitaet\ Oldenburg)\r\n\ @version\ 2.0\ (07.06.2008)\r\n\ \r\n
+comment0.text=Notizen\:\r\n\ \r\n\ Eine\ Spalte\ \=\ 1\ Kammer\r\n\ Die\ einzelnen\ K\u00F6rner\ auf\ den\ Felder\ sind\ jeweils\ eine\ Ziffer\ der\ ganzen\ Zahl,\r\n\ von\ links\ nach\ rechts\ gelesen.\r\n\ \r\n\ Was\ wollen\ wir\:\ Der\ Hamster\ soll\ all\ seine\ K\u00F6rner\ abz\u00E4hlen\ und\ das\ Ergebnis\ in\ der\ \r\n\ untersten\ Zeile\ eintragen\ (In\ Korn-Form,\ pro\ Zahl\ ein\ Feld).\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Tue\ was\:\ das\ Hamster-Programm\r\n
-numComments=2
+comment10.params=
+comment10.target=void\ alleKoerner()
+comment10.text=Ablegemethoden\:\r\n
+comment11.params=
+comment11.target=void\ koernerUeberblick()
+comment12.params=dieseKoerner
+comment12.target=void\ koernerAblegen(int)
+comment2.params=
+comment2.target=void\ stepsBisWand()
+comment2.text=Bewegungsmethoden\:\r\n
+comment3.params=
+comment3.target=void\ stepsBisKorn()
+comment4.params=
+comment4.target=void\ geheLinkeWand()
+comment5.params=
+comment5.target=void\ geheRechteWand()
+comment6.params=
+comment6.target=void\ zeileNachUnten()
+comment7.params=
+comment7.target=void\ geheLinkeObereEcke()
+comment8.params=
+comment8.target=void\ koernerZaehlen()
+comment8.text=Z\u00E4hlmethoden\:\r\n
+comment9.params=
+comment9.target=int\ koernerAufsammeln()
+numComments=13
