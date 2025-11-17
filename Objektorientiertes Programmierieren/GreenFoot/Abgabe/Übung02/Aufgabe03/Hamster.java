@@ -156,8 +156,6 @@ public class Hamster extends BasicHamster {
         int length = sum.length();
         int index = length - 1;
         
-        System.out.println(index);
-        
         while(index >= 0) {
             
             char letzteZahl = sum.charAt(index);
