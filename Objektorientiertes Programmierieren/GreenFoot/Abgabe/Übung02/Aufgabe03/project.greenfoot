@@ -42,10 +42,10 @@ dependency8.type=UsesDependency
 dependency9.from=Korn
 dependency9.to=Mauer
 dependency9.type=UsesDependency
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
+editor.fx.0.height=737
+editor.fx.0.width=814
+editor.fx.0.x=360
+editor.fx.0.y=26
 height=611
 package.numDependencies=13
 package.numTargets=9
@@ -129,5 +129,10 @@ target9.y=10
 version=3.1.0
 width=776
 world.lastInstantiated=Territorium
+<<<<<<< HEAD
 xPosition=1112
 yPosition=111
+=======
+xPosition=532
+yPosition=88
+>>>>>>> 81f4133679d5c17d9e95b8f56354c386f8ae3d55
