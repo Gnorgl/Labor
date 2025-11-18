@@ -129,5 +129,10 @@ target9.y=10
 version=3.1.0
 width=780
 world.lastInstantiated=Territorium
+<<<<<<< HEAD
 xPosition=760
 yPosition=0
+=======
+xPosition=196
+yPosition=100
+>>>>>>> dcd5d7bf7565e0301c0569999020418c387e6951
