@@ -11,7 +11,7 @@ public class Gehege {
     
     public static void main(String args[]) {
         Gehege raubtierGehege = new Gehege("Löwenkäfig", 5);
-        Gehege polarGehege = new Gehege("Eiswelten", 4);
+        Gehege polarGehege = new Gehege("Eiswelten", 3);
         Gehege baerenGehege = new Gehege("Bärenkäfig", 7);
         
          // Informationen über Gehege ausgeben
@@ -80,9 +80,9 @@ public class Gehege {
     public void fuegeTierHinzu(Tier tier) {
         if(this.groesse - this.anzahlTiere > 0) {
             this.anzahlTiere++;
-            System.out.println(tier.getName() + " hat ein neues Zushause: " + getName());
+            System.out.println(tier.getName() + " hat ein neues Zuhause: " + getName());
         } else {
-            System.out.println("Das Gehege " + getName() + " ist zu klein für Teddy");
+            System.out.println("Das Gehege " + getName() + " ist zu klein für " + tier.getName());
         }
     }
     
