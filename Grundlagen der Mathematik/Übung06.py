@@ -10,7 +10,7 @@ from matplotlib.pyplot import plot, grid, show
 from matplotlib import pyplot as plt
 from celluloid import Camera
 
-#Aufgabe 3:
+#Aufgabe 2:
 
 #Wir gehen von der Funktion f(t) = a*cos(bt+c) aus.
 
@@ -34,7 +34,7 @@ plt.ylabel("Amplitude f(t)")
 plt.title("Plot der Funktion f(t) = 3 cos(2pi/5 * t + 2pi/5)")
 plt.show()
 
-#Aufgabe 4:
+#Aufgabe 3:
 
 #a)
 #b)
