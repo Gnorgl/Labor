@@ -12,7 +12,7 @@ from celluloid import Camera
 
 #Aufgabe 2:
 
-#Wir gehen von der Funktion f(t) = a*cos(bt+c) aus.
+#Wir gehen von der Funktion f(t) = a*cos(bt+c) aus. Allgemeine Form einer Kosinusfunktion, harmonische Schwingung.
 
 a = 3.0 #Das ist unsere Amplitude aus der Aufgabe
 T = 5.0 #Hier haben wir die Wellenlänge T
