@@ -43,7 +43,7 @@ public class Tier {
     }
     
     public void geburtstagsFeiern() {
-        if(this.lebendig == false) {
+        if(!this.lebendig) {
             System.out.println(getName() + " ist tot");
             return;
         } else {
@@ -53,7 +53,7 @@ public class Tier {
     }
     
     public void gibInfoAus() {
-        if(this.lebendig = false) {
+        if(!this.lebendig) {
             System.out.println(getName() + " war ein " + getArt());
             return;
         }

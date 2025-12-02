@@ -14,7 +14,7 @@ public class Rechteck {
     
     public static void main(String args[]) {
         Rechteck rechtEck1 = new Rechteck(2, 5, 1, 4);
-        Rechteck rechtEck2 = new Rechteck(3, 4, 2, 3);
+        Rechteck rechtEck2 = new Rechteck(2, 5, 1, 4);
         if(rechtEck2.enthaelt(rechtEck1)) {
             System.out.println("Das erste Rechteck enthält das zweite Rechteck!");
         } else {
@@ -39,8 +39,8 @@ public class Rechteck {
     }
     
     public boolean enthaelt(Rechteck rechtEck) {
-        return x1 < rechtEck.getx1() && y1 < rechtEck.gety1() 
-                && x2 > rechtEck.getx2() && y2 > rechtEck.gety2();
+        return x1 <= rechtEck.getx1() && y1 <= rechtEck.gety1() 
+                && x2 >= rechtEck.getx2() && y2 >= rechtEck.gety2();
         // if(x1 < rechtEck.getx1() && y1 < rechtEck.gety1()) {
             // if(x2 > rechtEck.getx2() && y2 > rechtEck.gety2()) {
                 // return true;

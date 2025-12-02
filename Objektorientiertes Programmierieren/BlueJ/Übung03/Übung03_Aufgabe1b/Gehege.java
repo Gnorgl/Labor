@@ -51,6 +51,7 @@ public class Gehege {
         Tier fracktraeger = new Tier("Frackträger", "Pinguin", 0);
         
         //Eisbär Taufung:
+        
         eisbär.setName("Knut");
         Tier knut = eisbär;
         

@@ -16,12 +16,13 @@ public class Tier {
         this.art = art;
         this.alter = alter;
         this.lebendig = true;
+        this.name = art;
     }
     
     public String getName() {
         return this.name;
     }
-    
+     
     public String getArt() {
         return this.art;
     }
