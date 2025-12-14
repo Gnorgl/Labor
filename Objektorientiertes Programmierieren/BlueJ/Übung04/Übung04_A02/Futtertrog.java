@@ -94,20 +94,12 @@ public class Futtertrog {
     
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
-        int input;
-        String nochmal;
-        //do-schleife:
-        do {
-            do {
-                System.out.println("Gib eine ganze Zahl ein");
-                input = Integer.valueOf(scanner.nextLine());
-            } while (input < 5 || input > 50 || input % 2 == 0);
-            //wenn nummer größer/gleich 5 oder nummer kleiner/gleich 50 und ungerade ist:
-            Futtertrog futtertrog = new Futtertrog(input);
-            futtertrog.zeichnen();
-            System.out.println("Nochmal? (y/n)");
-            nochmal = scanner.nextLine();
-        } while(nochmal.equals("y"));
+        Tier tier = new Tier("Knut", "Eisbaer", 3);
+        
+        for(int i = 0; i < 10; i++) {
+            int wert = tier.ermittleBeduerfnis();
+            tier.gibBeduerfnisAus(wert);
+        }
     }
     
     

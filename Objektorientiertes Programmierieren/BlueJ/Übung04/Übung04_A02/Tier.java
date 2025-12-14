@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Tier {
     private String name;
     private String art;
@@ -62,12 +64,18 @@ public class Tier {
     }
     
     //Neue Methoden: Bedürfnisse:
-    public void ermittleBeduerfnis() {
-        
+    public int ermittleBeduerfnis() {
+        Random generator = new Random();
+        int zufaelligesBeduerfnis = generator.nextInt(3);
+        return zufaelligesBeduerfnis;
     }
     
-    public void gibBeduerfnisAus() {
-        
+    public void gibBeduerfnisAus(int wert) {
+        switch(wert) {
+            case 0 -> System.out.println(this.name + " will spielen.");
+            case 1 -> System.out.println(this.name + " ist hungrig");
+            case 2 -> System.out.println(this.name + " will ein sauberes Gehege");
+        }   
     }
 
 }
