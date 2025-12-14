@@ -92,17 +92,4 @@ public class Futtertrog {
         
     }
     
-    public static void main(String args[]) {
-        Scanner scanner = new Scanner(System.in);
-        Tier tier = new Tier("Knut", "Eisbaer", 3);
-        
-        for(int i = 0; i < 10; i++) {
-            int wert = tier.ermittleBeduerfnis();
-            tier.gibBeduerfnisAus(wert);
-        }
-    }
-    
-    
-    
-    
 }
