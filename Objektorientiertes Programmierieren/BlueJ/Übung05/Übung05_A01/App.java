@@ -37,6 +37,30 @@ public class App {
                 c[i] = a[i];
             }
         }
+        
+        // Beispielhafte Merge-Funktion
+        public static void merge(int[] arr, int[] links, int[] rechts) {
+            int i = 0, j = 0, k = 0;
+        
+            // Solange in beiden Arrays noch Elemente sind
+            while (i < links.length && j < rechts.length) {
+                if (links[i] <= rechts[j]) {
+                    arr[k++] = links[i++];
+                } else {
+                    arr[k++] = rechts[j++];
+                }
+            }
+        
+            // Falls links noch Reste sind (z.B. die 11 und 12)
+            while (i < links.length) {
+                arr[k++] = links[i++];
+            }
+        
+            // Falls rechts noch Reste sind
+            while (j < rechts.length) {
+                arr[k++] = rechts[j++];
+            }
+        }
         */
     }
 }
