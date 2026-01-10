@@ -17,7 +17,7 @@ public class App {
         
         while(i < a.length && j < b.length) {
             if(a[i] <= b[j]) {
-                neuesArray[k] = a[i];
+                neuesArray[k] = a[i]; //Frage: mit [k++]? 
                 k++;
                 i++;
             } else {
