@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Tierpfleger
+comment1.params=name
+comment1.target=Tierpfleger(java.lang.String)
+comment2.params=tier
+comment2.target=void\ pflege(Tier)
+comment3.params=tier
+comment3.target=void\ fuettern(Tier)
+comment4.params=tier
+comment4.target=void\ spielen(Tier)
+comment5.params=tier
+comment5.target=void\ reinigen(Tier)
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+numComments=7
