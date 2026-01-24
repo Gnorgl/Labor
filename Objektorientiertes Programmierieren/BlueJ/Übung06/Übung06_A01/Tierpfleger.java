@@ -31,14 +31,4 @@ public class Tierpfleger {
     private void reinigen(Tier tier) {
         System.out.println(this.name + " reinigt das Gehege von " + tier.getName() + ".");
     }
-    
-    public static void main(String args[]) {
-
-        Tier tier = new Tier("Knut", "Eisbaer", 3);
-        Tierpfleger tierpfleger = new Tierpfleger("Max");
-        
-        for(int i = 0; i < 10; i++) {
-            tierpfleger.pflege(tier);
-        }
-    }
 }

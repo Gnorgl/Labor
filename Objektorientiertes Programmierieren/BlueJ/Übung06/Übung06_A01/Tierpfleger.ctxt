@@ -10,6 +10,4 @@ comment4.params=tier
 comment4.target=void\ spielen(Tier)
 comment5.params=tier
 comment5.target=void\ reinigen(Tier)
-comment6.params=args
-comment6.target=void\ main(java.lang.String[])
-numComments=7
+numComments=6
