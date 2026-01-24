@@ -1,11 +1,42 @@
 public class App {
     public static void main(String args[]) {
-
-        Tier tier = new Tier("Knut", "Eisbaer", 3);
-        Tierpfleger tierpfleger = new Tierpfleger("Max");
+        Gehege raubtierGehege = new Gehege("Löwenkäfig", 5);
+        Gehege polarGehege = new Gehege("Eiswelten", 3);
+        Gehege baerenGehege = new Gehege("Bärenkäfig", 7);
+         // Informationen über Gehege ausgeben
+        raubtierGehege.gibInfoAus();
+        polarGehege.gibInfoAus();
+        baerenGehege.gibInfoAus();
+         // Das Raubtiergehege wird umbenannt
+        raubtierGehege.setName("Tigerkäfig");
+         // Informationen über Gehege ausgeben
+        raubtierGehege.gibInfoAus();
+         // Tiere anlegen
+        Tier eisbaer = new Tier("Eisbär", 0);
+        Tier braunbaer = new Tier("Teddy", "Braunbär", 4);
+        Tier pinguin = new Tier("Frackträger", "Pinguin", 2);
+        Tier robbe = new Tier("Robbie", "Robbe", 3);
+        Tier nochEinEisbaer = new Tier("Helga", "Eisbär", 0);
         
-        for(int i = 0; i < 10; i++) {
-            tierpfleger.pflege(tier);
-        }
+        eisbaer.setName("Knut");
+        eisbaer.geburtstagsFeiern();
+        braunbaer.geburtstagsFeiern();
+        
+        eisbaer.gibInfoAus();
+        braunbaer.gibInfoAus();
+        // Tiere ziehen ein
+        baerenGehege.fuegeTierHinzu(braunbaer);
+        polarGehege.fuegeTierHinzu(eisbaer);
+        polarGehege.fuegeTierHinzu(pinguin);
+        polarGehege.fuegeTierHinzu(robbe);
+        polarGehege.fuegeTierHinzu(nochEinEisbaer);
+        baerenGehege.gibInfoAus();
+        polarGehege.gibInfoAus();
+        // Knut stirbt und zieht aus; Helga versucht es noch einmal
+        eisbaer.sterben();
+        polarGehege.entferneTier();
+        polarGehege.fuegeTierHinzu(nochEinEisbaer);
+        baerenGehege.gibInfoAus();
+        polarGehege.gibInfoAus();
     }
 }

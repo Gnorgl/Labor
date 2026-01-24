@@ -60,7 +60,7 @@ public class Tier {
     }
     
     public void gibInfoAus() {
-        if(this.lebendig = false) {
+        if(this.lebendig == false) {
             System.out.println(getName() + " war ein " + getArt());
             return;
         }
