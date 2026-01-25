@@ -3,6 +3,7 @@ public class Gehege {
     private int groesse;
     private int anzahlTiere;
     private Tier[] tiere;
+    private Tierpfleger tierpfleger;
     
     public Gehege(String name, int groesse) {
         this.name = name;
@@ -10,6 +11,14 @@ public class Gehege {
         this.anzahlTiere = 0;
         this.tiere = new Tier[groesse];
         
+    }
+    
+    public void setTierpfleger(Tierpfleger tierpfleger) {
+        this.tierpfleger = tierpfleger; 
+    }
+    
+    public Tierpfleger getTierpfleger() {
+        return this.tierpfleger;
     }
     
     public Tier[] getTiere() {
@@ -59,7 +68,15 @@ public class Gehege {
         }
     }
     
-    
+    public void pflegeTiere() {
+        if(getTierpfleger() == null) {
+            System.out.println("Dieses Gehege hat keinen Tierpfleger");
+        } else {
+            for(int i = 0; i < this.anzahlTiere; i++) {
+                this.tierpfleger.pflege(tiere[i]);
+            }
+        }
+    }
     
     
     

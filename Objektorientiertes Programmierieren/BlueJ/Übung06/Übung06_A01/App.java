@@ -38,5 +38,15 @@ public class App {
         polarGehege.fuegeTierHinzu(nochEinEisbaer);
         baerenGehege.gibInfoAus();
         polarGehege.gibInfoAus();
+        
+        // Tierpfleger anlegen und den Gehegen zuordnen
+        Tierpfleger heidi = new Tierpfleger("Heidi");
+        raubtierGehege.setTierpfleger(heidi);
+        Tierpfleger klaus = new Tierpfleger("Klaus");
+        polarGehege.setTierpfleger(klaus);
+        // Tiere pflegen
+        raubtierGehege.pflegeTiere();
+        polarGehege.pflegeTiere();
+        baerenGehege.pflegeTiere();
     }
 }
