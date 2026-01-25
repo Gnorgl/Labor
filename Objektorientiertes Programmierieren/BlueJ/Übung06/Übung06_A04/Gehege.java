@@ -46,7 +46,7 @@ public class Gehege {
     }
     
     public void fuegeTierHinzu(Tier tier) throws UeberfuellungException {
-        if((tiere.length - this.anzahlTiere) > 0) {
+        if(this.anzahlTiere < this.tiere.length) {
             System.out.println(tier.getName() + " hat ein neues Zuhause: " + getName());
             this.tiere[this.anzahlTiere] = tier;
             this.anzahlTiere++;
@@ -59,11 +59,11 @@ public class Gehege {
         if(this.anzahlTiere > 0) {
             this.anzahlTiere--;
             Tier entferntesTier = this.tiere[this.anzahlTiere];
-            System.out.println(this.tiere[this.anzahlTiere].getName() + " ist aus dem Gehege " + getName() + " ausgebrochen");
+            System.out.println(entferntesTier.getName() + " ist aus dem Gehege " + getName() + " ausgebrochen");
             this.tiere[this.anzahlTiere] = null;
             return entferntesTier;
         } else {
-            System.out.println("Gehe ist leer!");
+            System.out.println("Gehege ist leer!");
             return null;
         }
     }
