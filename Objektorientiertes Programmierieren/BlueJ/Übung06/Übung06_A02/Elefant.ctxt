@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Elefant
+comment1.params=name\ alter
+comment1.target=Elefant(java.lang.String,\ int)
+comment2.params=alter
+comment2.target=Elefant(int)
+comment3.params=
+comment3.target=void\ gibLaut()
+numComments=4
