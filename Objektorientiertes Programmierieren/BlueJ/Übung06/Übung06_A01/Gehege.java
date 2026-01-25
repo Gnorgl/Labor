@@ -78,9 +78,44 @@ public class Gehege {
         }
     }
     
-    
-    
-    
-    
-    
+    //Main-Method:
+    public static void main(String args[]) {
+        Gehege savanne = new Gehege("Savanne", 6);
+        
+        Tier haubentaucher1 = new Haubentaucher("Haubentaucher1", 1);
+        Tier haubentaucher2 = new Haubentaucher("Haubentaucher2", 2);
+        Tier koboldhai1 = new Koboldhai("Koboldhai1", 10);
+        Tier elefant1 = new Elefant("Elefant1", 30);
+        
+        savanne.fuegeTierHinzu(haubentaucher1);
+        savanne.fuegeTierHinzu(haubentaucher2);
+        savanne.fuegeTierHinzu(koboldhai1);
+        savanne.fuegeTierHinzu(elefant1);
+        
+        //mit equals null check, sonst:
+        //java.lang.NullPointerException: Cannot invoke "Tier.gibInfoAus()" because "tier" is null
+        
+        for(Tier tier : savanne.getTiere()) {
+            if(tier != null) {
+                tier.gibInfoAus();
+            }
+        }
+        
+        /*
+        
+        okay, aber mit foreach noch besser:
+        
+        Tier[] testArray = savanne.getTiere();
+        
+        for(int i = 0; i < savanne.getAnzahlTiere(); i++) {
+            testArray[i].gibInfoAus();
+        }
+        
+        schlecht, weil die Methode getTiere() immer wieder aufgerufen wird:
+
+        for(int i = 0; i < savanne.getAnzahlTiere(); i++) {
+            savanne.getTiere()[i].gibInfoAus();
+        }
+        */
+    }  
 }

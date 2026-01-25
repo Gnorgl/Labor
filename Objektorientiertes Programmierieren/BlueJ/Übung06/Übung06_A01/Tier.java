@@ -64,7 +64,12 @@ public class Tier {
             System.out.println(getName() + " war ein " + getArt());
             return;
         }
-        System.out.println(getName() + " ist ein " + getArt() + " im Alter von  " + getAlter() + " Jahren");
+        
+        if(this.getAlter() == 1) {
+            System.out.println(getName() + " ist ein " + getArt() + " im Alter von  " + getAlter() + " Jahr");
+        } else {
+            System.out.println(getName() + " ist ein " + getArt() + " im Alter von  " + getAlter() + " Jahren");
+        }
     }
     
     //Neue Methoden: Bedürfnisse:
