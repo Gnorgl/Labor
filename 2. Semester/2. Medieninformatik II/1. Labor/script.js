@@ -45,3 +45,28 @@ function generateTable() {
     // Add the table to the document
     document.getElementById("table_container").appendChild(table);
 }
+
+const container = document.getElementById('lotto-container');
+
+for (let i = 1; i <= 49; i++) {
+  const btn = document.createElement('button');
+  btn.innerText = i;
+  btn.classList.add('lotto-button');
+
+  
+  btn.addEventListener('click', function() {
+
+    const ausgewaehlteAnzahl = document.querySelectorAll('.lotto-button.selected').length;
+    
+    if (this.classList.contains('selected')) {
+        this.classList.remove('selected')
+    }
+
+    else if (ausgewaehlteAnzahl < 6) {
+        this.classList.add('selected');
+    }
+    
+  });
+
+  container.appendChild(btn);
+}
