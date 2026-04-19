@@ -28,3 +28,29 @@ body {
   font-weight: bold;
   color: black;
 }
+
+.controls {
+  margin-top: 20px;
+}
+
+.lotto-button.correct {
+  background-color: #2ecc71 !important;
+  color: white;
+}
+
+.lotto-button.wrong {
+  background-color: #e74c3c !important;
+  color: white;
+}
+
+#play-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.lotto-button.drawn-not-selected {
+    background-color: orange !important;
+    color: white;
+}
+
+
