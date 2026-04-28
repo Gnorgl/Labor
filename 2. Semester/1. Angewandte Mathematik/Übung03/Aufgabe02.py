@@ -114,18 +114,17 @@ def DrawCart( p, R):
 
     
 # MAIN PROGRAM
-fig = figure( figsize =(10, 8))
+fig = figure(figsize=(10, 8))
 camera = Camera(fig)
 
-Points, Tangents = RailwayTrack( linspace(0, 55, 500))
-size(Points)
+# Strecke für den Hintergrund berechnen
+Points, Tangents = RailwayTrack(linspace(0, 55, 500))
 
-
-#Startwerte
+# Startwerte für die Physik
 u = 0.0      # Position auf der Strecke
 v = 0.0      # Geschwindigkeit
 g = -9.81    # Erdbeschleunigung
-dt = 0.05    # Zeitschritt
+dt = 0.05    # Zeitschritt für eine flüssige Animation
 
 while u < 55:
     # 1. Schiene zeichnen
@@ -155,6 +154,6 @@ while u < 55:
     axis('equal')
     camera.snap()
 
-anim = camera.animate(interval=50) # interval in Millisekunden
+anim = camera.animate()
 show()
 
