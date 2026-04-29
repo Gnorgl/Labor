@@ -114,46 +114,26 @@ def DrawCart( p, R):
 
     
 # MAIN PROGRAM
-fig = figure(figsize=(10, 8))
+fig = figure( figsize =(10, 8))
 camera = Camera(fig)
 
-# Strecke für den Hintergrund berechnen
-Points, Tangents = RailwayTrack(linspace(0, 55, 500))
+Points, Tangents = RailwayTrack( linspace(0, 55, 500))
+size(Points)
 
-# Startwerte für die Physik
-u = 0.0      # Position auf der Strecke
-v = 0.0      # Geschwindigkeit
-g = -9.81    # Erdbeschleunigung
-dt = 0.05    # Zeitschritt für eine flüssige Animation
 
-while u < 55:
-    # 1. Schiene zeichnen
-    plot(Points[0, :], Points[1, :], 'k')
+dt = .5 # time step
+for t in arange( 0, 55+dt, dt):
+    # draw railway track
+    plot( Points[ 0,:], Points[ 1,:], 'k')
 
-    # 2. Aktuelle Position und Tangente holen
-    p, tv = RailwayTrack(u)
+    p,x = RailwayTrack( t)
+    R = eye(2) # ROTATION MATRIX
     
-    # 3. Rotationsmatrix R aus tv und up bilden
-    # tv ist [tv_x, tv_y], up ist [-tv_y, tv_x]
-    R = array([[tv[0], -tv[1]], 
-               [tv[1],  tv[0]]])
-    
-    # 4. Lore zeichnen
-    DrawCart(p, R)
-    
-    # 5. Physik-Update (Euler-Verfahren)
-    # a ist proportional zu g und der y-Komponente der Tangente
-    a = g * tv[1]  
-    
-    v = v + a * dt  # v_neu = v_alt + a * dt
-    u = u + v * dt  # u_neu = u_alt + v * dt
-    
-    # Sicherheit: u darf nicht negativ werden (falls sie zurückrollt)
-    if u < 0: u = 0; v = 0 
-
+    DrawCart( p, R)
     axis('equal')
     camera.snap()
 
+
 anim = camera.animate()
-show()
+show() # show animation
 
