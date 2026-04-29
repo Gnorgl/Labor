@@ -3,6 +3,7 @@
 from numpy import *
 from matplotlib.pyplot import figure, plot, axis, show
 from celluloid import Camera
+import matplotlib.pyplot as plt
 
 
 def RailwayTrack( X):
@@ -114,26 +115,50 @@ def DrawCart( p, R):
 
     
 # MAIN PROGRAM
-fig = figure( figsize =(10, 8))
-camera = Camera(fig)
 
 Points, Tangents = RailwayTrack( linspace(0, 55, 500))
 size(Points)
 
 
-dt = .5 # time step
-for t in arange( 0, 55+dt, dt):
-    # draw railway track
-    plot( Points[ 0,:], Points[ 1,:], 'k')
+fig = plt.figure(figsize=(10, 8))
 
-    p,x = RailwayTrack( t)
-    R = eye(2) # ROTATION MATRIX
-    
-    DrawCart( p, R)
-    axis('equal')
-    camera.snap()
+#unsere werte
+u = 0.0 #start position
+v = 0.5 #start geschwindigkeit
+g = -9.81 #beschleunigung
+dt = 0.1 # zeitschritt
+
+while 0 <= u < 55:
+    plt.cla() #bild löschen
+
+    #schiene
+    plt.plot(Points[0, :], Points[1, :], 'k')
+
+    #position berechnen
+    p, tv = RailwayTrack(u)
+    R = array([[tv[0], -tv[1]], 
+               [tv[1],  tv[0]]])
+
+    #zeichne das ding an position p und rotation R aus der matrix oben
+    DrawCart(p, R)
+    plt.axis('equal')
+    plt.title(f"Position u: {u:.2f} | v: {v:.2f}") #formatted string mit variable im text .2f float 2 nachkommastellen
+
+    plt.pause(0.01) #pausiert bild, ohne das funktioniert es irgendwie nicht, geht keine animation mit camera
+
+    a = g * tv[1]   # beschleunigung tangential zur Schiene
+    v = v + a * dt  # neue Geschwindigkeit
+    u = u + v * dt  # neue Position
+
+    '''
+    falls es falsch berechnet wird
+    if u < 0:
+        u = 0
+        v = 0.1 u nicht kleiner 0
+    '''
+
+plt.show()
 
 
-anim = camera.animate()
-show() # show animation
+
 
