@@ -124,7 +124,7 @@ fig = plt.figure(figsize=(10, 8))
 
 #unsere werte
 u = 0.0 #start position
-v = 0.5 #start geschwindigkeit
+v = 0.1 #start geschwindigkeit
 g = -9.81 #beschleunigung
 dt = 0.1 # zeitschritt
 
