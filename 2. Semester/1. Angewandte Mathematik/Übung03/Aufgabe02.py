@@ -121,6 +121,7 @@ size(Points)
 
 
 fig = plt.figure(figsize=(10, 8))
+#camera = Camera(fig)
 
 #unsere werte
 u = 0.0 #start position
@@ -156,7 +157,7 @@ while 0 <= u < 55:
         u = 0
         v = 0.1 u nicht kleiner 0
     '''
-
+#anim = camera.animate()
 plt.show()
 
 
