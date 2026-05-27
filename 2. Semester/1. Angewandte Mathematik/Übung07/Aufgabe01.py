@@ -20,7 +20,7 @@ def DrawLine( p1, p2, color = "b*-"):
     plot( P[0,:], P[1,:], color)
 
 p = random.randn(2)
-v = array([ 3, random.randn(1)])
+v = array([3, random.randn(1)[0]])
 DrawLine( p - 3*v, p + 3*v, 'r')
 
 for i in range(20):

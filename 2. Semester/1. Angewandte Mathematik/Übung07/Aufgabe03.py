@@ -37,7 +37,7 @@ y_centri = interp1d(knots_centri, y, kind='cubic')(t_centri)
 plot(x_centri, y_centri, 'm-.', label='Zentripetal')
 
 # Originalpunkte plotten
-plot(x, y, 'r*', My_markersize=10, label='Datenpunkte')
+plot(x, y, 'r*', markersize=10, label='Datenpunkte')
 
 title('Vergleich parametrischer Splines')
 grid(True)
