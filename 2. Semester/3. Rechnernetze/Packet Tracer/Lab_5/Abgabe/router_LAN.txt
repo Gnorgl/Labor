@@ -1,0 +1,109 @@
+﻿VLAN and DHCP configuration: router_lan
+Group: NexaCore: Gian, Khang, Richard
+________________
+Current configuration : 1447 bytes
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router_LAN
+!
+!
+!
+enable secret 5 $1$mERr$9cTjUIEqNGurQiFU.ZeCi1
+!
+!
+ip dhcp excluded-address 192.168.10.1 192.168.10.10
+ip dhcp excluded-address 192.168.20.1 192.168.20.10
+ip dhcp excluded-address 192.168.30.1 192.168.30.10
+!
+ip dhcp pool vlan10
+network 192.168.10.0 255.255.255.0
+default-router 192.168.10.1
+dns-server 204.204.7.3
+ip dhcp pool vlan20
+network 192.168.20.0 255.255.255.0
+default-router 192.168.20.1
+dns-server 204.204.7.3
+ip dhcp pool vlan30
+network 192.168.30.0 255.255.255.0
+default-router 192.168.30.1
+dns-server 204.204.7.3
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+no ip address
+duplex auto
+speed auto
+!
+interface FastEthernet0/0.10
+encapsulation dot1Q 10
+ip address 192.168.10.1 255.255.255.0
+!
+interface FastEthernet0/0.20
+encapsulation dot1Q 20
+ip address 192.168.20.1 255.255.255.0
+!
+interface FastEthernet0/0.30
+encapsulation dot1Q 30
+ip address 192.168.30.1 255.255.255.0
+!
+interface FastEthernet0/1
+ip address 204.204.7.1 255.255.255.248
+duplex auto
+speed auto
+!
+interface Vlan1
+no ip address
+shutdown
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 204.204.7.4
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+login
+!
+line aux 0
+!
+line vty 0 4
+login
+transport input none
+!
+!
+!
+end
