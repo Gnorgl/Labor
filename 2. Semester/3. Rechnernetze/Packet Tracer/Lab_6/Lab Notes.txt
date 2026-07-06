@@ -1,0 +1,12 @@
+top router muss oberer router sein
+hostname befehl? router nicht falsch konfigurieren
+3 Router und 1 Switch muss konfigurieren
+auf central switch umschalten -> eine große Topologie alle gruppen
+x = gruppennummer
+x = 3
+pc links ist pc1
+pc 
+kabel rausziehen für trunk aus 1?
+
+Warum kann R1 den R3 Router nicht pingen?
+Router_3.1 kennt im Moment nur die Netzwerke, mit denen er direkt verbunden ist (sein eigenes LAN und das Netz 10.3.30.0/30 zu Router_3.2). Er hat absolut keine Ahnung, dass es dahinter noch ein Netzwerk 10.3.30.4/30 gibt, und weiß nicht, wohin er die Pakete schicken soll. Es fehlt eine Route.
