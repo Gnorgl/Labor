@@ -11,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="83" />
+    <option name="cachedIndexableFilesCount" value="92" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExportToHTMLSettings">
@@ -32,20 +32,8 @@
         <entry key="$PROJECT_DIR$/.." value="feature-generic-list" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Gnorgl&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Gnorgl/Labor.git&quot;,
-    &quot;accountId&quot;: &quot;0fc76f5a-89a3-4b58-8fd3-4651f110b6aa&quot;
-  }
-}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -68,43 +56,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BibClientCUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.BibClientGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.BibGuiAusVL.executor&quot;: &quot;Run&quot;,
-    &quot;Application.BibGuiMitBoxLayout.executor&quot;: &quot;Run&quot;,
-    &quot;Application.BibGuiMitKomponenten (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.JavaFxGui.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Hochschule/Labor/2. Semester/4. Programmieren/Bibliothek/Bibliothek&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BibClientCUI.executor": "Run",
+    "Application.BibClientGUI.executor": "Run",
+    "Application.BibClientGUIVL.executor": "Run",
+    "Application.BibClientGuiMitKomponenten.executor": "Run",
+    "Application.BibGuiAusVL.executor": "Run",
+    "Application.BibGuiMitBoxLayout.executor": "Run",
+    "Application.BibGuiMitKomponenten (1).executor": "Run",
+    "Application.BibGuiMitKomponenten.executor": "Run",
+    "Application.JavaFxGui.executor": "Run",
+    "Application.bib.local.ui.gui.BibClientGUI.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/thorsten/Documents/Lehre/PROG-2 SoSe 26/_ws-intellij/Bibliothek/src/bib/local/ui/gui",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/bib/local/ui/gui" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="bib.local.ui.gui" />
       <recent name="bib.local.ui.gui.swing" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BibClientCUI">
+  <component name="RunManager" selected="Application.bib.local.ui.gui.BibClientGUI">
     <configuration name="BibClientCUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bib.local.ui.cui.BibClientCUI" />
       <module name="Bibliothek" />
@@ -131,12 +127,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BibGuiAusVL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bib.local.ui.gui.swing.BibGuiAusVL" />
+    <configuration name="BibClientGUIVL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bib.local.ui.gui.BibClientGUIVL" />
       <module name="Bibliothek" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bib.local.ui.gui.swing.*" />
+          <option name="PATTERN" value="bib.local.ui.gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,12 +140,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BibGuiMitKomponenten (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bib.local.ui.gui.swing.BibGuiMitKomponenten" />
+    <configuration name="BibClientGuiMitKomponenten" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bib.local.ui.gui.BibClientGuiMitKomponenten" />
       <module name="Bibliothek" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bib.local.ui.gui.swing.*" />
+          <option name="PATTERN" value="bib.local.ui.gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -157,13 +153,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaFxGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bib.local.ui.gui.fx.JavaFxGui" />
+    <configuration name="bib.local.ui.gui.BibClientGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bib.local.ui.gui.BibClientGUI" />
       <module name="Bibliothek" />
-      <option name="VM_PARAMETERS" value="--module-path $JAVA_FX$ --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bib.local.ui.gui.fx.*" />
+          <option name="PATTERN" value="bib.local.ui.gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -172,21 +167,29 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BibClientCUI" />
+      <item itemvalue="Application.BibClientGuiMitKomponenten" />
+      <item itemvalue="Application.BibClientGUIVL" />
+      <item itemvalue="Application.bib.local.ui.gui.BibClientGUI" />
       <item itemvalue="Application.BibClientGUI" />
-      <item itemvalue="Application.BibGuiAusVL" />
-      <item itemvalue="Application.BibGuiMitKomponenten (1)" />
-      <item itemvalue="Application.JavaFxGui" />
+      <item itemvalue="Application.BibClientCUI" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BibClientCUI" />
-        <item itemvalue="Application.JavaFxGui" />
+        <item itemvalue="Application.bib.local.ui.gui.BibClientGUI" />
+        <item itemvalue="Application.BibClientGuiMitKomponenten" />
+        <item itemvalue="Application.BibClientGUIVL" />
         <item itemvalue="Application.BibClientGUI" />
-        <item itemvalue="Application.BibGuiAusVL" />
-        <item itemvalue="Application.BibGuiMitKomponenten (1)" />
+        <item itemvalue="Application.BibClientCUI" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.32098.37" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.32098.37" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -298,7 +301,23 @@
       <workItem from="1776069335608" duration="2187000" />
       <workItem from="1776156099802" duration="6413000" />
       <workItem from="1776670207219" duration="88000" />
-      <workItem from="1776762241967" duration="3725000" />
+      <workItem from="1776762241967" duration="3840000" />
+      <workItem from="1777272737011" duration="2197000" />
+      <workItem from="1777361866243" duration="5206000" />
+      <workItem from="1777875817039" duration="606000" />
+      <workItem from="1777972064997" duration="597000" />
+      <workItem from="1778481792849" duration="3091000" />
+      <workItem from="1778566428379" duration="5805000" />
+      <workItem from="1779093999156" duration="964000" />
+      <workItem from="1779108291735" duration="6962000" />
+      <workItem from="1779288347258" duration="505000" />
+      <workItem from="1779345797924" duration="475000" />
+      <workItem from="1779355775602" duration="22000" />
+      <workItem from="1779355831948" duration="17000" />
+      <workItem from="1779699816649" duration="2512000" />
+      <workItem from="1779783735707" duration="8250000" />
+      <workItem from="1780317029053" duration="3577000" />
+      <workItem from="1780378077261" duration="8762000" />
     </task>
     <servers />
   </component>
@@ -315,6 +334,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/bib/local/ui/gui/models/BooksTableModel.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

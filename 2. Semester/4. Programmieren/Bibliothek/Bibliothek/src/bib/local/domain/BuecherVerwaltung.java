@@ -1,6 +1,9 @@
 package bib.local.domain;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -66,9 +69,9 @@ public class BuecherVerwaltung {
 
 		// Durchlaufen einer Liste mit einem Iterator:
 		if (!buchBestand.isEmpty()) {
-            for (Buch b : buchBestand) {
-                pm.speichereBuch(b);
-            }
+			for (Buch b : buchBestand) {
+				pm.speichereBuch(b);
+			}
 //			Iterator<Buch> iter = buchBestand.iterator();
 //			while (iter.hasNext()) {
 //				Buch b = iter.next();

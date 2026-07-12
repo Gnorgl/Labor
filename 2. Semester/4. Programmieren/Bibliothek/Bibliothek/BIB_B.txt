@@ -1,27 +1,39 @@
 Das OO-Buch fuer alle
 123
-t
+f
 Java ist toll
 222
-t
+f
 Java ist auch eine Insel
 987
-t
+f
 Java - alles kalter Kaffee?
 951
 t
 Java-Reiseführer
 647
-t
+f
 Java von Kopf bis Fuß
 333
-f
+t
 Mein Freund, der Baum
 815
-t
+f
 Java für Dummies
 357
 f
+Blackout
+987
+f
+Testbuch
+132
+f
+Erzmagos
+444
+f
+Ein tolles Buch
+951
+t
 Java ist toll
-9873
+531
 t
