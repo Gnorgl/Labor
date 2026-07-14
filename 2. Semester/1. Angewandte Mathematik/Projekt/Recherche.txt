@@ -2,7 +2,19 @@ Recherche:
 
 Was bedeutet Terminal Output
 Was bedeutet Farb Gradient
+Was bedeutet Bifurcation
+Warum Chaos als Fix gegen spatial Limitation
 Wie kann man den Verlauf der einzelnen Patterns anhand der Parameter erklären
 Wo ist der Zusammenhang zwischen Mathematik und Code
 Mathematik an sich verstehen
 Biologischen Hintergrund verstehen -> Morphogenesis
+Wenn Random Seed Pattern genutzt wird, werden diese dann nur ein einziges mal ausgegeben oder konstant
+Was bedeutet V -> P
+An welchen Stellen füllt sich U nach, nur dort wo noch U existiert, oder überall?
+Wie funktioniert in diesem System die Mitose?
+Wie entstehen bestimmte Patterns?
+
+
+
+
+Bifurcation Point: Moment where mathematical equation splits from having one type of solution into new types of solution.
