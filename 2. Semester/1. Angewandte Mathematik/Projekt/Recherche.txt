@@ -12,16 +12,21 @@ Wie entstehen bestimmte Patterns?
 
 Bifurcation Point: Moment where mathematical equation splits from having one type of solution into new types of solution.
 
+------------------------------------------------------------------------------------------------------------------
+
 Color Gradient: Dark Color: U at 1.0 no reaction
 		Red and Orange: Active zone with autocatalytic reaction, V is multiplying
 		Bright Yellow: Maximum concentration of V. Here is U is heavily depleted
 		
+------------------------------------------------------------------------------------------------------------------
+
 Terminal Output: Solver Stability Analysis with Von Neumann Stability Criterion
 
 While the mean (average) value of $V$ only tells you the total amount of chemical on the board, the $L_2$-norm tells you how that chemical is distributed. The contrast of concentraion across the whole grid.
 
 Because the $L_2$-norm formula squares the values before summing them, the math heavily rewards those intense peaks in Scenario B. Squaring $0.5$ yields $0.25$ (a massive contribution per pixel), whereas squaring $0.02$ yields a microscopic $0.0004$.
 
+------------------------------------------------------------------------------------------------------------------
 
 Why random seeds work as fix for spatial limitation: symmetry breaking and spatial scale. 
 
@@ -33,6 +38,8 @@ He then added $\pm 1\%$ random noise to this central patch.
 
 We chose the random seeds, because it takes a long time to evolve with a central patch with random noise.
 
+------------------------------------------------------------------------------------------------------------------
+
 Mitosis: We have a spot:
 
 If the parameters ($F$ and $k$) favor growth, the spot begins to expand outward because the activator $V$ diffuses into the surrounding fuel-rich territory.However, as the spot grows wider, a mathematical crisis occurs at its exact center:
@@ -40,3 +47,13 @@ If the parameters ($F$ and $k$) favor growth, the spot begins to expand outward 
 -The perimeter of the spot is expanding and easily devouring fresh fuel from the outside.
 -The center of the spot is now too far away from the fresh fuel supply. Because $U$ is being consumed rapidly on the outskirts, it cannot diffuse deeply enough into the core of the spot before getting eaten.
 -The center of the spot literally starves. The concentration of $V$ drops in the middle, flattening the circular peak into a hollow ring or a "peanut" shape.
+
+Once the center of the spot starves completely, $V$ drops to $0.0$ at the core, and $U$ rushes back in to fill the void. This cuts the peanut shape directly down the middle.
+
+Diffusion Rate of U must be higher than V and feed rate can not be too high, since the center must starve. Feed rate cannot be too low or spots cannot grow. 
+
+Mitosis happens in that perfect "sweet spot" where the center starves just enough to break the spot apart.
+
+------------------------------------------------------------------------------------------------------------------
+
+
