@@ -6,6 +6,8 @@ Mathematik an sich verstehen
 Biologischen Hintergrund verstehen -> Morphogenesis
 Wie funktioniert in diesem System die Mitose?
 Wie entstehen bestimmte Patterns?
+What exactly happens once the simulation runs, how do the methods interact.
+how does the rendering of the simulation work
 
 
 
@@ -55,5 +57,40 @@ Diffusion Rate of U must be higher than V and feed rate can not be too high, sin
 Mitosis happens in that perfect "sweet spot" where the center starves just enough to break the spot apart.
 
 ------------------------------------------------------------------------------------------------------------------
+
+Euler: Approximate time in discrete steps of dt 1.0 Rate of change over time for each chemical
+
+Laplacian operator: Spatial divergence of the gradient. Compares the concentration of a chemical at a specific point 
+to the average concentration of its immediate surroundings.
+[row, col]
+
+i is y
+j is x
+
+np.roll takes an array and slides all of its elements like a conveyor belt. Any element that falls off the edge is rolled back to the starting side.
+
+example: A = [10, 20, 30, 40]
+np.roll(A, shift=1): [40, 10, 20, 30] numbers slide right
+np.roll(A, shift=-1): [20, 30, 40, 10] numbers slide left
+
+axis = 0 up, down
+axis = 1 left, right
+
+q_{i,j} = center
+q_{i,j+1} = right neighbor
+q_{i,j-1} = left neighbor
+q_{i+1,j} = bottom neighbor
+q_{i-1,j} = top neighbor
+
+-If a pixel has more chemical than its neighbors, the Laplacian is negative (chemical flows out).
+-If a pixel has less chemical than its neighbors, the Laplacian is positive (chemical flows in).
+The diffusion coefficients ($D_u = 0.16$, $D_v = 0.08$) act as speed multipliers for this spatial flattening.
+
+Reaction Term UV^2: U x V x V -> reaction = U * (V**2)
+
+Feed (F) and kill (k): 
+For U: +F(1-U)
+For V: -(F+k)V
+
 
 
