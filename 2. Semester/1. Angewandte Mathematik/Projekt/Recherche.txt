@@ -131,5 +131,10 @@ There are 3 forces acting on a chemical at any given pixel:
 │    Project the new pixel values 1.0 time-step forward. 				  │
 └────────────────────────────────────────────────────────┘
 
+------------------------------------------------------------------------------------------------------------------
 
+A time step is the temporal resolution fo the simulation. It is the jump the simulation takes into the future on every single calculation. So the difference in accuracy of the calculation. The smaller the time step the closer the calculation to the true value.
+
+The time step \Delta t is the temporal resolution
+The spatial step \Delta x is the spatial resolution of the grid: Physical distance between the centers of any two adjacent pixels. In the real world it might be 0.1mm. Here we define the distance from pixel to pixel as 1 grid unit. Makes tracking easy.
 
