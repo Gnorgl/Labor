@@ -33,4 +33,10 @@ He then added $\pm 1\%$ random noise to this central patch.
 
 We chose the random seeds, because it takes a long time to evolve with a central patch with random noise.
 
-Mitosis:
+Mitosis: We have a spot:
+
+If the parameters ($F$ and $k$) favor growth, the spot begins to expand outward because the activator $V$ diffuses into the surrounding fuel-rich territory.However, as the spot grows wider, a mathematical crisis occurs at its exact center:
+
+-The perimeter of the spot is expanding and easily devouring fresh fuel from the outside.
+-The center of the spot is now too far away from the fresh fuel supply. Because $U$ is being consumed rapidly on the outskirts, it cannot diffuse deeply enough into the core of the spot before getting eaten.
+-The center of the spot literally starves. The concentration of $V$ drops in the middle, flattening the circular peak into a hollow ring or a "peanut" shape.
