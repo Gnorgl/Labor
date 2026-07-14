@@ -138,3 +138,33 @@ A time step is the temporal resolution fo the simulation. It is the jump the sim
 The time step \Delta t is the temporal resolution
 The spatial step \Delta x is the spatial resolution of the grid: Physical distance between the centers of any two adjacent pixels. In the real world it might be 0.1mm. Here we define the distance from pixel to pixel as 1 grid unit. Makes tracking easy.
 
+  [Time Step 0]  --->  We start with current concentrations: U = 0.50, V = 0.25
+        │
+        ▼
+  [Step 1: Space] --->  4-Point Stencil: "My neighbors have more U than me, so 
+                        U is diffusing in. My neighbors have less V, so V is diffusing out."
+        │
+        ▼
+  [Step 2: Chem]  --->  Reaction & Feed/Kill: "U and V are colliding here to make more V, 
+                        while the feed rate replenishes U and the kill rate drains V."
+        │
+        ▼
+  [Step 3: Rates] --->  Combine them: we sum the physical forces (Diffusion + Reaction + Feed/Kill).
+                        This gives us our exact instantaneous rates: dU_dt and dV_dt.
+        │
+        ▼
+  [Step 4: Euler] --->  Apply the step: New Concentration = Old Concentration + (1.0 * Rate of Change).
+        │
+        ▼
+  [Time Step 1]  --->  The pixel instantly updates to its new values: U = 0.48, V = 0.27.
+
+The visuals do not update for every \Delta t = 1.0, but instead the 4 step math is run 30 times in a row, jumping 30 steps into the future and then draws the new frame on the screen. So every frame is 30 time steps.
+
+------------------------------------------------------------------------------------------------------------------
+Code-Implementation:
+
+
+
+
+
+
