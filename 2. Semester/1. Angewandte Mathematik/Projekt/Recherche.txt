@@ -60,7 +60,22 @@ Mitosis happens in that perfect "sweet spot" where the center starves just enoug
 
 Euler: Approximate time in discrete steps of dt 1.0 Rate of change over time for each chemical
 
-Laplacian operator: Spatial divergence of the gradient. Compares the concentration of a chemical at a specific point 
+Laplacian operator: is fundamentally a comparison operator
+
+We want to find the difference between our center pixel ($q_{i,j}$) and each of its four neighbors:
+
+-Right comparison: $(q_{i, j+1} - q_{i,j})$
+-Left comparison: $(q_{i, j-1} - q_{i,j})$
+-Bottom comparison: $(q_{i+1, j} - q_{i,j})$
+-Top comparison: $(q_{i-1, j} - q_{i,j})$
+
+If we want to know the net flow of chemical into or out of our center pixel, we simply add all four of these comparisons together:
+
+$$\text{Net Flow} = (q_{i, j+1} - q_{i,j}) + (q_{i, j-1} - q_{i,j}) + (q_{i+1, j} - q_{i,j}) + (q_{i-1, j} - q_{i,j})$$
+Now, group the like terms. We have one of each neighbor, and we are subtracting the center $q_{i,j}$ exactly four times:
+$$\text{Net Flow} = q_{i, j+1} + q_{i, j-1} + q_{i+1, j} + q_{i-1, j} - 4q_{i,j}$$
+
+Spatial divergence of the gradient. Compares the concentration of a chemical at a specific point 
 to the average concentration of its immediate surroundings.
 [row, col]
 
