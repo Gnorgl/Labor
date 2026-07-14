@@ -11,7 +11,6 @@ how does the rendering of the simulation work
 
 
 
-
 Bifurcation Point: Moment where mathematical equation splits from having one type of solution into new types of solution.
 
 ------------------------------------------------------------------------------------------------------------------
@@ -106,6 +105,31 @@ Reaction Term UV^2: U x V x V -> reaction = U * (V**2)
 Feed (F) and kill (k): 
 For U: +F(1-U)
 For V: -(F+k)V
+
+There are 3 forces acting on a chemical at any given pixel:
+1. Net-Flow: Laplacian Operator.
+2. Chemical-Reactions: UV^2
+3. Feed-/Kill-Rate
+
+┌────────────────────────────────────────────────────────┐
+│ 1. Calculate Net Flow (Laplacian stencil)              				  │
+│    How much U and V wants to diffuse in/out of pixel?  				  │
+└───────────────────┬────────────────────────────────────┘
+                    ▼
+┌────────────────────────────────────────────────────────┐
+│ 2. Calculate Chemistry (Reaction & Feed/Kill)                       	  |
+│    How much U and V is being created or destroyed?                 	  |
+└───────────────────┬────────────────────────────────────┘
+                    ▼
+┌────────────────────────────────────────────────────────┐
+│ 3. Combine Forces (Find dU/dt and dV/dt)               				  │
+│    Rate of Change = Diffusion + Reaction + Feed/Kill   				  │
+└───────────────────┬────────────────────────────────────┘
+                    ▼
+┌────────────────────────────────────────────────────────┐
+│ 4. Euler Step (U += dt * dU_dt)                        				  │
+│    Project the new pixel values 1.0 time-step forward. 				  │
+└────────────────────────────────────────────────────────┘
 
 
 
