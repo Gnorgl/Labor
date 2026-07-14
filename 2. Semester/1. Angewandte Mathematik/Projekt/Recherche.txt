@@ -1,14 +1,6 @@
 Recherche:
 
-Wie kann man den Verlauf der einzelnen Patterns anhand der Parameter erklären
-Wo ist der Zusammenhang zwischen Mathematik und Code
-Mathematik an sich verstehen
-Biologischen Hintergrund verstehen -> Morphogenesis
-Wie funktioniert in diesem System die Mitose?
 Wie entstehen bestimmte Patterns?
-What exactly happens once the simulation runs, how do the methods interact.
-how does the rendering of the simulation work
-
 
 
 Bifurcation Point: Moment where mathematical equation splits from having one type of solution into new types of solution.
