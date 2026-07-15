@@ -161,8 +161,38 @@ The visuals do not update for every \Delta t = 1.0, but instead the 4 step math 
 ------------------------------------------------------------------------------------------------------------------
 Code-Implementation:
 
+[ Matplotlib Event Loop ]
+             │
+             ├─► (Every ~16ms) ──► Triggers `update_frame`
+             │                         │
+             │                         ▼
+             │                 Run 30 steps of:
+             │                 `run_simulation_step` (Euler + Laplacian)
+             │                         │
+             │                         ▼
+             │                 Every 10th frame:
+             │                 Print math statistics to Terminal
+             │                         │
+             │                         ▼
+             │                 Update pixel color values
+             │                 via `im.set_array(V)`
+             │                         │
+             │                         ▼
+             │                 Blit changed pixels to Screen
+             │
+             └─► (User Input) ──► Interrupts via Callback (Updates F or k)
 
 
+Instead of rendering the grid to the screen after every single calculation step, the CPU computes 30 math steps sequentially in background memory within a fraction of a millisecond.
 
+To prevent this telemetry from slowing down your simulation's frame rate, the code uses a modulo operator checkpoint (frame_number % 10 == 0):It only runs these calculations once every 10 frames (which equals every $10 \times 30 = 300$ mathematical time steps).V_prev = V.copy(): After printing, it takes a fresh snapshot of the grid. This snapshot acts as the baseline for the next metrics cycle, allowing the program to calculate how much $V$ has drifted ($\text{dV/dt}$) over the next 300 steps.
+
+------------------------------------------------------------------------------------------------------------------
+
+return [im]: Crucial for blitting. Returning a list containing the modified image plot tells Matplotlib exactly which pixels have changed, so it only re-renders the grid area instead of the entire window layout.
+
+blit=True: Enables "bit block transfer" (blitting). Instead of redrawing the background, sliders, text boxes, and buttons on every frame, the computer only redraws the $100 \times 100$ pixel array, speeding up rendering performance by up to $10\times$.
+
+Blitting: Massive performance speed. Instead of rendering a 2D image pixel-by-pixel using the CPU, blitting copies an entire block of memory at once, often utilizing dedicated hardware acceleration.
 
 
