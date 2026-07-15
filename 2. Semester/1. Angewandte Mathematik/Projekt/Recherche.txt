@@ -1,12 +1,19 @@
 Recherche:
 
-Wie entstehen bestimmte Patterns?
+------------------------------------------------------------------------------------------------------------------
+
+Pattern Creation:
+
+The parameters F and k control what patterns form. This changes the balance between resources availability and population decline. Which enables different morphological states.
+
+
+------------------------------------------------------------------------------------------------------------------
 
 Gray-Scott Gleichung:
 \partial u / \partial t = Du \nabla^2 * u - uv^2 + F(1-u)
 \partial v / \partial t = Dv \nabla^2 * v + uv^2 - (F+k)v
 
-Die Gray Scott Gleichung beschreibt die Änderung der Konzentration eines Stoffes mit der Zeit. In einem Pixel?
+The Gray-Scott equation tells you how the concentration of each substance at any point on the grid changes over time.
 
 
 Bifurcation Point: Moment where mathematical equation splits from having one type of solution into new types of solution.
